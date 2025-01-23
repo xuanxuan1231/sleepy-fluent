@@ -1,4 +1,4 @@
-> ![NOTE]
+> [!NOTE]
 > 源项目地址：[wyf9/sleepy](https://github.com/wyf9/sleepy)
 
 # sleepy-nextgen 
