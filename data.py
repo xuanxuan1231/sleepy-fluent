@@ -8,21 +8,21 @@ from time import sleep
 import utils as u
 
 
-# def initJson():
-#     '''
-#     初始化 (创建 data.json 文件)
-#     '''
-#     try:
-#         jsonData = {  # 初始 data.json 数据
-#             'status': 0,
-#             'device_status': {},
-#             'last_updated': '1970-01-01 08:00:00'
-#         }
-#         with open('data.json', 'r', encoding='utf-8') as file:
-#             json.dump(jsonData, file, indent=4, ensure_ascii=False)
-#     except:
-#         u.error('Create data.json failed')
-#         raise
+def initJson():
+    '''
+    初始化 (创建 data.json 文件)
+    '''
+    try:
+        jsonData = {  # 初始 data.json 数据
+            'status': 0,
+            'device_status': {},
+            'last_updated': '1970-01-01 08:00:00'
+        }
+        with open('data.json', 'r', encoding='utf-8') as file:
+            json.dump(jsonData, file, indent=4, ensure_ascii=False)
+    except:
+        u.error('Create data.json failed')
+        raise
 
 
 class data:
