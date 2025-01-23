@@ -57,7 +57,7 @@ async function update() {
                             } else {
                                 var device_app = '<a class="device-status-unused" style="font-size: 18px;" >未在使用</a>';
                             }
-                            deviceStatus += `<div class="setting-card"> <div class="left">${device.show_name}</div><div class="right">${device_app}</div> </div>`;  // 设备卡片（设备名称+设备状态）
+                            deviceStatus += `<div class="setting-card"> <div class="left"><h3>${device.show_name}</h3></div><div class="right">${device_app}</div> </div>`;  // 设备卡片（设备名称+设备状态）
                         }
                         if (deviceStatus == '<h2>设备状态</h2>') { // 没有发现设备
                             deviceStatus = '';
