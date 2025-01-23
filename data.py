@@ -18,7 +18,7 @@ def initJson():
             'device_status': {},
             'last_updated': '1970-01-01 08:00:00'
         }
-        with open('data.json', 'r', encoding='utf-8') as file:
+        with open('data.json', 'w+', encoding='utf-8') as file:
             json.dump(jsonData, file, indent=4, ensure_ascii=False)
     except:
         u.error('Create data.json failed')
@@ -27,7 +27,7 @@ def initJson():
 
 class data:
     '''
-    data 类，存储当前/设备状态
+    data 类，存储持久化状态
     可用 `.data['xxx']` 直接调取数据 (加载后) *(?)*
     '''
     data: dict
@@ -44,11 +44,6 @@ class data:
             os.remove('data.json')
             initJson()
             self.load()
-        with open('data.json', 'r', encoding='utf-8') as file:
-            Data = json.load(file)
-            self.data = Data
-
-    # --- Storage functions
 
     def load(self, ret: bool = False) -> dict:
         '''
@@ -58,15 +53,17 @@ class data:
         '''
         with open('data.json', 'r', encoding='utf-8') as file:
             Data = json.load(file)
-            self.data = Data
-        
+            if ret:
+                return Data
+            else:
+                self.data = Data
 
     def save(self):
         '''
         保存配置
         '''
-        # with open('data.json', 'w+', encoding='utf-8') as file:
-        #     json.dump(self.data, file, indent=4, ensure_ascii=False)
+        with open('data.json', 'w+', encoding='utf-8') as file:
+            json.dump(self.data, file, indent=4, ensure_ascii=False)
 
     def dset(self, name, value):
         '''
@@ -80,8 +77,6 @@ class data:
         '''
         gotdata = self.data[name]
         return gotdata
-
-    # Timer check - save data
 
     def start_timer_check(self, data_check_interval: int = 60):
         '''
@@ -104,6 +99,3 @@ class data:
             file_data = self.load(ret=True)
             if file_data != self.data:
                 self.save()
-
-    # check device heartbeat
-    # TODO
