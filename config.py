@@ -8,18 +8,18 @@ from jsonc_parser.parser import JsoncParser as jsonp
 
 
 def initJson():
-    '''
-    初始化配置 (从 example.jsonc 加载)
-    '''
-    try:
-        jsonData = jsonp.parse_file('example.jsonc', encoding='utf-8')
-        with open('config.json', 'w+', encoding='utf-8') as file:
-            json.dump(jsonData, file, indent=4, ensure_ascii=False)
-        u.info('Generated new config file (config.json), please edit and re-run this program.')
-        u.info('Example: example.jsonc / Online: https://github.com/wyf9/sleepy/blob/main/example.jsonc')
-    except:
-        u.error('Create config.json failed')
-        raise
+    # '''
+    # 初始化配置 (从 example.jsonc 加载)
+    # '''
+    # try:
+    #     jsonData = jsonp.parse_file('example.jsonc', encoding='utf-8')
+    #     with open('config.json', 'w+', encoding='utf-8') as file:
+    #         json.dump(jsonData, file, indent=4, ensure_ascii=False)
+    #     u.info('Generated new config file (config.json), please edit and re-run this program.')
+    #     u.info('Example: example.jsonc / Online: https://github.com/wyf9/sleepy/blob/main/example.jsonc')
+    # except:
+    #     u.error('Create config.json failed')
+    #     raise
 
 
 class config:
@@ -33,9 +33,10 @@ class config:
         if not os.path.exists('config.json'):
             u.warning('config.json not exist, creating')
             initJson()
-        self.load()
-
+        self.loads()
     def load(self):
+        pass
+    def loads(self):
         '''
         加载配置
         '''
