@@ -8,9 +8,9 @@ from jsonc_parser.parser import JsoncParser as jsonp
 
 
 def initJson():
-    # '''
-    # 初始化配置 (从 example.jsonc 加载)
-    # '''
+    '''
+    初始化配置 (从 example.jsonc 加载)
+    '''
     # try:
     #     jsonData = jsonp.parse_file('example.jsonc', encoding='utf-8')
     #     with open('config.json', 'w+', encoding='utf-8') as file:
