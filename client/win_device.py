@@ -13,8 +13,8 @@ from sys import stdout
 from io import TextIOWrapper
 
 # --- config start
-SERVER = 'https://sleepy.rinlit.cn:443'
-SECRET = 'RinLitCw114514'
+SERVER = '服务器地址'
+SECRET = '密钥'
 DEVICE_ID = 'device-1'
 DEVICE_SHOW_NAME = '🖥️ Rin\'s Potato PC'
 CHECK_INTERVAL = 2
