@@ -46,16 +46,16 @@ class config:
     #     '''
     #     保存配置
     #     '''
-    #     with open('config.json', 'w+', encoding='utf-8') as file:
-    #         json.dump(self.data, file, indent=4, ensure_ascii=False)
+        with open('config.json', 'w+', encoding='utf-8') as file:
+            json.dump(self.data, file, indent=4, ensure_ascii=False)
 
     # def dset(self, name, value):
     #     '''
     #     设置一个值
     #     '''
     #     self.data[name] = value
-    #     with open('config.json', 'w+', encoding='utf-8') as file:
-    #         json.dump(self.data, file, indent=4, ensure_ascii=False)
+        with open('config.json', 'w+', encoding='utf-8') as file:
+            json.dump(self.data, file, indent=4, ensure_ascii=False)
 
     def get(self, name):
         '''
