@@ -12,17 +12,17 @@ def initJson():
     '''
     初始化 (创建 data.json 文件)
     '''
-    try:
-        jsonData = {  # 初始 data.json 数据
-            'status': 0,
-            'device_status': {},
-            'last_updated': '1970-01-01 08:00:00'
-        }
-        with open('data.json', 'w+', encoding='utf-8') as file:
-            json.dump(jsonData, file, indent=4, ensure_ascii=False)
-    except:
-        u.error('Create data.json failed')
-        raise
+    # try:
+    #     jsonData = {  # 初始 data.json 数据
+    #         'status': 0,
+    #         'device_status': {},
+    #         'last_updated': '1970-01-01 08:00:00'
+    #     }
+    #     with open('data.json', 'w+', encoding='utf-8') as file:
+    #         json.dump(jsonData, file, indent=4, ensure_ascii=False)
+    # except:
+    #     u.error('Create data.json failed')
+    #     raise
 
 
 class data:
@@ -38,14 +38,15 @@ class data:
             u.info('Could not find data.json, creating.')
             initJson()
         try:
-            self.load()
+            self.loads()
         except Exception as e:
             u.warning(f'Error when loading data: {e}, try re-create')
             os.remove('data.json')
             initJson()
             self.load()
-
     def load(self, ret: bool = False) -> dict:
+        pass
+    def loads(self, ret: bool = False) -> dict:
         '''
         加载状态
 
@@ -62,8 +63,8 @@ class data:
         '''
         保存配置
         '''
-        with open('data.json', 'w+', encoding='utf-8') as file:
-            json.dump(self.data, file, indent=4, ensure_ascii=False)
+        # with open('data.json', 'w+', encoding='utf-8') as file:
+        #     json.dump(self.data, file, indent=4, ensure_ascii=False)
 
     def dset(self, name, value):
         '''
