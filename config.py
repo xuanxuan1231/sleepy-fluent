@@ -63,7 +63,7 @@ class config:
         读取一个值
         '''
         try: 
-            if name = 'secret':
+            if name == 'secret':
                 gotdata = os.environ.get('secret')
             else:
                 gotdata = self.config[name]
