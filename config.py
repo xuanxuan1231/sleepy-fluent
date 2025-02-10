@@ -42,7 +42,7 @@ class config:
         '''
         with open('config.json', 'r', encoding='utf-8') as file:
             self.config = json.load(file)
-        config['secret'] = os.environ.get['secret']
+        config['secret'] = os.environ.get('secret')
 
     # def save(self):
     #     '''
