@@ -42,6 +42,7 @@ class config:
         '''
         with open('config.json', 'r', encoding='utf-8') as file:
             self.config = json.load(file)
+        config['secret'] = os.environ.get['secret']
 
     # def save(self):
     #     '''
@@ -62,7 +63,7 @@ class config:
         '''
         读取一个值
         '''
-        try:
+        try: 
             gotdata = self.config[name]
         except:
             gotdata = None
