@@ -5,7 +5,7 @@
     "port": 9010, 
     "timezone": "Asia/Shanghai", 
     "metrics": true, 
-    "secret": process.env.secret, 
+    "secret": "114514", 
     "status_list": [ 
         { 
             "id": 0, 
