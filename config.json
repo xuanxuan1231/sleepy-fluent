@@ -21,6 +21,7 @@
         }
     ],
     "data_check_interval": 30, 
+    "refresh": 5000
     "other": { 
         "user": "swx", 
         "background": "",
