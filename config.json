@@ -18,7 +18,12 @@
             "name": "似了",
             "desc": "睡似了或其他原因不在线，紧急情况请使用电话联系。",
             "color": "sleeping"
-        }
+        },
+        {
+            "id": 2,
+            "name": "半似不活",
+            "desc": "大概是在补作业，紧急情况请使用电话联系。",
+            "color": "awake",
     ],
     "data_check_interval": 30, 
     "refresh": 5000, 
@@ -26,10 +31,9 @@
         "user": "swx", 
         "background": "",
         "alpha": 0.85,
-        "learn_more": "GitHub Repo", 
-        "repo": "https://github.com/wyf9/sleepy", 
-        "more_text": "", 
-        "refresh": 5000, 
+        "learn_more": "Class Widgets", 
+        "repo": "https://github.com/Class-Widgets/Class-Widgets", 
+        "more_text": "<a href='https://wakatime.com/@xuanxuan1231'>Wakatime</a>", 
         "device_status_slice": 30, 
         "show_loading": true, 
         "hitokoto": false,
