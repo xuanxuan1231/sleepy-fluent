@@ -24,6 +24,7 @@
             "name": "半似不活",
             "desc": "大概是在补作业，紧急情况请使用电话联系。",
             "color": "awake",
+        }
     ],
     "data_check_interval": 30, 
     "refresh": 5000, 
